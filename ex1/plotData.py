@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def plotData(data):
     """
     plots the data points and gives the figure axes labels of
@@ -18,6 +19,20 @@ def plotData(data):
 #       appear as red crosses. Furthermore, you can make the
 #       markers larger by using plot(..., 'rx', 'MarkerSize', 10);
 
-    plt.figure()  # open a new figure window
+    #data = np.loadtxt('ex1data1.txt', delimiter=',')
+    #m = data.shape[0]
+    X = data[:, 0]
+    y = data[:, 1]
+
+    
+    plt.plot(X, y, 'rx', ms=5)
+    plt.xlabel('Population of City in 10,000s')
+    plt.ylabel('Profit in $10,000s')
+    plt.ylim(-5, 25)
+    plt.xlim(4, 24)
+
+
+
+    #plt.figure()  # open a new figure window
 
 # ============================================================

@@ -22,9 +22,22 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         #
 
 
+        predictions = X.dot(theta).flatten()
+        
+        errors_x1 = (predictions - y) * X[:, 0]
+        errors_x2 = (predictions - y) * X[:, 1]
+        
+        theta[0] = theta [0] - alpha * (1.0 / m) * errors_x1.sum()
+        theta[1] = theta [0] - alpha * (1.0 / m) * errors_x2.sum()
+        
+        
+
         # ============================================================
 
         # Save the cost J in every iteration
         J_history.append(computeCost(X, y, theta))
 
     return theta, J_history
+
+
+
