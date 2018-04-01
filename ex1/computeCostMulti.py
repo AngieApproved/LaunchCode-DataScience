@@ -11,6 +11,11 @@ def computeCostMulti(X, y, theta):
 #               You should set J to the cost.
 
 
+    predictions = X.dot(theta)
+    sqErrors = (predictions - y) ** 2
+    J = (1.0 / (2 * m)) * sum(sqErrors)
+
+
 # =========================================================================
 
     return J

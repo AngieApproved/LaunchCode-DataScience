@@ -15,9 +15,7 @@ def computeCost(X, y, theta):
     
     # You need to return the following variables correctly 
     
-    predictions = X.dot(theta)
-    sqErrors = (predictions - y) ** 2
-    
+   
 
 # ====================== YOUR CODE HERE ======================
 # Instructions: Compute the cost of a particular choice of theta
@@ -53,6 +51,8 @@ def computeCost(X, y, theta):
     #iterations = 1500
     #alpha = 0.01
     
+    predictions = X.dot(theta)
+    sqErrors = (predictions - y) ** 2
     
     J = (1.0 / (2 * m)) * sum(sqErrors)
     

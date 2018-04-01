@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from gradientDescentMulti import gradientDescentMulti
 from normalEqn import normalEqn
 from featureNormalize import featureNormalize
-from show import show
+
 # ================ Part 1: Feature Normalization ================
 
 print('Loading data ...')
@@ -61,7 +61,7 @@ X = np.concatenate((np.ones((m, 1)), X), axis=1)
 print('Running gradient descent ...')
 
 # Choose some alpha value
-alpha = 0.01
+alpha = 0.003
 num_iters = 400
 
 # Init Theta and Run Gradient Descent 
@@ -72,7 +72,7 @@ theta, J_history = gradientDescentMulti(X, y, theta, alpha, num_iters)
 plt.plot(J_history, '-b')
 plt.xlabel('Number of iterations')
 plt.ylabel('Cost J')
-show()
+plt.show()
 input("Program paused. Press Enter to continue...")
 
 # Display gradient descent's result
